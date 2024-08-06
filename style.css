@@ -1,0 +1,203 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 10px;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding-inline: 15px;
+  height: 8rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: white;
+  z-index: 1000;
+}
+
+nav img {
+  height: 40px;
+  width: 40px;
+  object-fit: cover;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+}
+
+.menu a {
+  text-decoration: none;
+}
+
+.menu h4 {
+  font-size: 1.5rem;
+  border-radius: 50px;
+  padding: 4px 8px;
+  color: black;
+  transition: background-color 0.3s ease-in;
+}
+
+.menu h4:hover {
+  background-color: black;
+  color: white;
+}
+
+.search-bar {
+  width: 75%;
+}
+
+.search-bar input[type="text"] {
+  width: 100%;
+  border-radius: 20px;
+  border: none;
+  background-color: #dad9d9;
+  font-size: 1.6rem;
+  padding: 13px 18px;
+}
+
+.searches {
+  position: absolute;
+  width: 65%;
+  background-color: white;
+  z-index: 1000;
+  visibility: hidden;
+}
+
+.other-icons {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.other-icons i {
+  font-size: 2.5rem;
+  color: gray;
+}
+
+.main-container {
+  padding-top: 10rem;
+  padding-inline: 6.2rem;
+  width: 100%;
+  height: auto;
+}
+
+.grid {
+  height: inherit;
+  width: 100%;
+}
+
+.main-container img {
+  border-radius: 10px;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+
+
+.grid-item .image {
+  position: relative;
+}
+
+.grid-item .overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 5;
+  border-radius: 10px;
+}
+
+.grid-item .overlay:hover {
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.grid-item img {
+  position: relative;
+  width: 220px;
+  z-index: 1;
+}
+
+.main {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.grid {
+  transition: all 0.2s ease-in;
+}
+
+.download-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.6);
+  z-index: 900;
+  height: 100%;
+  width: 100%;
+  display: none;
+  transition: all 0.3s ease-in;
+}
+
+.downloader {
+  position: fixed;
+  top: 56%;
+  left: 50%;
+  height: 66%;
+  width: 50%;
+  padding: 5px;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  background: white;
+  border-radius: 40px;
+  display: none;
+  animation: popup 0.4s ease-in-out 1;
+  justify-content: space-between;
+}
+
+@keyframes popup {
+  0% {
+    height: 0%;
+    width: 0%;
+  }
+  80% {
+    height: 80%;
+    width: 70%;
+  }
+  100% {
+    height: 66%;
+    width: 50%;
+  }
+}
+
+.downloader .left {
+  width: 60%;
+  height: 100%;
+  border-radius: 40px;
+}
+
+.downloader .right {
+  width: 35%;
+  height: 100%;
+  border-radius: 40px;
+}
+
+.left img {
+  height: 100%;
+  width: 100%;
+  border-radius: inherit;
+  object-fit: cover;
+}
